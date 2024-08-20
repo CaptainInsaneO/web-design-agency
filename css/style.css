@@ -1,0 +1,302 @@
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.krub-extralight {
+  font-family: "Krub", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.krub-light {
+  font-family: "Krub", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.krub-regular {
+  font-family: "Krub", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.krub-medium {
+  font-family: "Krub", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.krub-semibold {
+  font-family: "Krub", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.krub-bold {
+  font-family: "Krub", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.krub-extralight-italic {
+  font-family: "Krub", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.krub-light-italic {
+  font-family: "Krub", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.krub-regular-italic {
+  font-family: "Krub", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.krub-medium-italic {
+  font-family: "Krub", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.krub-semibold-italic {
+  font-family: "Krub", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.krub-bold-italic {
+  font-family: "Krub", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+:root {
+  --mainFont: Krub, sans-serif;
+
+  --white: #ffff;
+  --black: #212121;
+  --gray: #758694;
+  --primary: #7c00fe;
+  --secondary: #f9e400;
+  --lightBlu: #d1e9f6;
+}
+
+body {
+  font-family: var(--mainFont);
+  min-height: 100%;
+  background: linear-gradient(to top, var(--lightBlu) 0%, white 100%);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+nav a {
+  text-decoration: none;
+  margin-bottom: 1.4rem;
+  font-size: 1.4rem;
+  color: var(--black);
+  transition: color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  nav a {
+    margin-bottom: 0;
+  }
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.hero {
+  background-image: url(../img/hero.jpg);
+  height: 450px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero::after {
+  background: rgba(0, 0, 0, 0.8);
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: block;
+}
+
+.hero-content {
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero-content i {
+  color: var(--secondary);
+  font-size: 2rem;
+}
+
+.button {
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #5f08bc;
+}
+
+.container {
+  background-color: var(--white);
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 3rem auto;
+  box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.45);
+  border-radius: 1rem;
+}
+
+h2,
+h3 {
+  text-align: center;
+}
+
+h3 {
+  color: var(--primary);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+@media (min-width: 768px) {
+  .services-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .service {
+    flex: 0 0 calc(33.3% - 1rem);
+  }
+}
+
+.service p {
+  line-height: 2;
+}
+
+.icon {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon i {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  background-color: var(--gray);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  form {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .field {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.field label {
+  flex: 0 0 90px;
+  color: var(--white);
+}
+
+.field input[type="text"],
+.field input[type="tel"],
+.field input[type="mail"],
+textarea {
+  flex: 1;
+  height: 2.4rem;
+}
+
+.w-100 {
+  flex: 0 0 100%;
+}
+
+.field textarea {
+  height: 4rem;
+}
+
+.submit-form {
+  display: flex;
+  justify-content: center;
+}
